@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+
+
+
+    <TextView
+
+        android:id="@+id/maso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        />
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        >
+        <TextView
+            android:id="@+id/txtHoten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ tên :"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/hoten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+
+            />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        >
+        <TextView
+            android:id="@+id/txtLop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lớp :"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/lop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+
+
+
+    </TableRow>
+   <TableRow
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="5dp"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent">
+
+       <TextView
+           android:id="@+id/txtdiemtb"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Điểm TB :"
+           android:textSize="18sp"
+           />
+
+
+       <TextView
+           android:id="@+id/diemtb"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           />
+
+   </TableRow>
+
+       <TableRow
+           android:layout_marginTop="20dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+
+           >
+           <Button
+               android:id="@+id/btnFirst"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="First"
+               android:textColor="#ffffff"
+               android:textSelectHandleLeft="@android:color/holo_orange_light"
+               android:textAllCaps="false"
+               android:background="@drawable/first_button"
+               />
+
+           <Button
+               android:id="@+id/btnPrev"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="Pre"
+               android:textColor="#ffffff"
+               android:textSelectHandleLeft="@android:color/holo_orange_light"
+               android:textAllCaps="false"
+               android:background="@drawable/prev_button"
+               />
+
+
+           <Button
+               android:id="@+id/btnNext"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="Next"
+               android:textColor="#ffffff"
+               android:textSelectHandleLeft="@android:color/holo_orange_light"
+               android:textAllCaps="false"
+               android:background="@drawable/next_button"
+               />
+
+
+           <Button
+               android:id="@+id/btnLast"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="Last"
+               android:textColor="#ffffff"
+               android:textSelectHandleLeft="@android:color/holo_orange_light"
+               android:textAllCaps="false"
+               android:background="@drawable/last_button"
+               />
+
+
+
+
+       </TableRow>
+
+
+
+
+</TableLayout>
