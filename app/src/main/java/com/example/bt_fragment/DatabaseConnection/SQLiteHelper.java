@@ -19,11 +19,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public SQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+        //context.deleteDatabase(DATABASE_NAME);
     }
 
     public void CreateTable(){
         SQLiteDatabase db=getWritableDatabase();
-        String CREATE_TABLE_CLASS="CREATE TABLE IF NOT  EXISTS LOP (MaLop INTEGER PRIMARY KEY, TenLop NVARCHAR(100));";
+        String CREATE_TABLE_CLASS="CREATE TABLE IF NOT  EXISTS LOP (MaLop INTEGER PRIMARY KEY AUTOINCREMENT, TenLop NVARCHAR(100));";
         db.execSQL(CREATE_TABLE_CLASS);
 
 
@@ -37,8 +38,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public void InsertTableClass(){
         SQLiteDatabase db=getWritableDatabase();
-       // db.execSQL( "insert into LOP(MaLop,TenLop) values (1,'Lop 1');" );
-        //db.execSQL( "insert into LOP(MaLop,TenLop) values (2,'Lop 2');" );
+        db.execSQL( "insert into LOP(TenLop) values ('Lop 1');" );
+        db.execSQL( "insert into LOP(TenLop) values ('Lop 2');" );
+        db.execSQL( "insert into LOP(TenLop) values ('Lop 3');" );
+        db.execSQL( "insert into LOP(TenLop) values ('Lop 4');" );
 
         db.close();
     }
@@ -48,8 +51,9 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
 
         db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('AAA', 3.1,1);" );
-        db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('BBB', 4.2,1);" );
-        db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('CCC', 5.5,1);" );
+        db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('BBB', 4.2,3);" );
+        db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('CCC', 5.5,2);" );
+        db.execSQL( "insert into HOCSINH(HoTen,DTB,MaLop) values ('CCC', 8.5,4);" );
     }
 
     public Cursor getData(String sql){
@@ -97,7 +101,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        //db.execSQL("DETACH DATABASE " + DATABASE_NAME);
+        db.execSQL("DETACH DATABASE " + DATABASE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + "LOP");
         db.execSQL("DROP TABLE IF EXISTS " + "HOCSINH");
 
